@@ -25,5 +25,5 @@ protected:
 	void TraceForBlock(const FVector& Start, const FVector& End, bool bDrawDebugHelpers);
 
 	UPROPERTY(EditInstanceOnly, BlueprintReadWrite)
-	class AAoHBlock* CurrentBlockFocus;
+	class AHexagonTile* CurrentBlockFocus;
 };

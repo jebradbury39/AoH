@@ -1,7 +1,7 @@
 // Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
 
 #include "AoHPawn.h"
-#include "AoHBlock.h"
+#include "HexagonTile.h"
 #include "Kismet/HeadMountedDisplayFunctionLibrary.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/PlayerController.h"
@@ -78,7 +78,7 @@ void AAoHPawn::TraceForBlock(const FVector& Start, const FVector& End, bool bDra
 	}
 	if (HitResult.Actor.IsValid())
 	{
-		AAoHBlock* HitBlock = Cast<AAoHBlock>(HitResult.Actor.Get());
+		AHexagonTile* HitBlock = Cast<AHexagonTile>(HitResult.Actor.Get());
 		if (CurrentBlockFocus != HitBlock)
 		{
 			if (CurrentBlockFocus)
